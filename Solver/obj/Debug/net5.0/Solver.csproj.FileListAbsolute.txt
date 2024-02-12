@@ -1,0 +1,16 @@
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\bin\Debug\net5.0\Solver.exe
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\bin\Debug\net5.0\Solver.deps.json
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\bin\Debug\net5.0\Solver.runtimeconfig.json
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\bin\Debug\net5.0\Solver.runtimeconfig.dev.json
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\bin\Debug\net5.0\Solver.dll
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\bin\Debug\net5.0\ref\Solver.dll
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\bin\Debug\net5.0\Solver.pdb
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\obj\Debug\net5.0\Solver.csproj.AssemblyReference.cache
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\obj\Debug\net5.0\Solver.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\obj\Debug\net5.0\Solver.AssemblyInfoInputs.cache
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\obj\Debug\net5.0\Solver.AssemblyInfo.cs
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\obj\Debug\net5.0\Solver.csproj.CoreCompileInputs.cache
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\obj\Debug\net5.0\Solver.dll
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\obj\Debug\net5.0\ref\Solver.dll
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\obj\Debug\net5.0\Solver.pdb
+c:\Users\Dokto\Desktop\Portfolio\Sudoku\Solver\obj\Debug\net5.0\Solver.genruntimeconfig.cache
