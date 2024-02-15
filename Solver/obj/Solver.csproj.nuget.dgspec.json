@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Dokto\\Desktop\\Portfolio\\Sudoku\\Solver\\Solver.csproj": {}
+    "C:\\Users\\Dokto\\Desktop\\Portfolio\\Sudoku\\Solver\\Solver.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Dokto\\Desktop\\Portfolio\\Sudoku\\Solver\\Solver.csproj": {
+    "C:\\Users\\Dokto\\Desktop\\Portfolio\\Sudoku\\Solver\\Solver.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Dokto\\Desktop\\Portfolio\\Sudoku\\Solver\\Solver.csproj",
+        "projectUniqueName": "C:\\Users\\Dokto\\Desktop\\Portfolio\\Sudoku\\Solver\\Solver.csproj",
         "projectName": "Solver",
-        "projectPath": "c:\\Users\\Dokto\\Desktop\\Portfolio\\Sudoku\\Solver\\Solver.csproj",
+        "projectPath": "C:\\Users\\Dokto\\Desktop\\Portfolio\\Sudoku\\Solver\\Solver.csproj",
         "packagesPath": "C:\\Users\\Dokto\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Dokto\\Desktop\\Portfolio\\Sudoku\\Solver\\obj\\",
+        "outputPath": "C:\\Users\\Dokto\\Desktop\\Portfolio\\Sudoku\\Solver\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dokto\\AppData\\Roaming\\NuGet\\NuGet.Config"

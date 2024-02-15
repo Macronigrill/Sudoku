@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -16,10 +17,13 @@ namespace Solver
     {
         static void Main(string[] args)
         {
-            int x_dims = 25;
-            int y_dims = 25;
+            Console.WriteLine("Geben sie die Seitenlänge des gewünschten Sudoku feldes ein, Die Quadratwurzel der Zahl muss eine glatte Zahl sein.");
+            Console.WriteLine("(Empfohlene größen: 9,16,25,36,49,64)");
+            int size = int.Parse(Console.ReadLine());
 
-            Field[,] board = IntializeBoard(x_dims, y_dims);
+
+
+            Field[,] board = IntializeBoard(size, size);
             List<Field> unsolved = new List<Field>();
             foreach (var item in board)
             {
@@ -52,7 +56,7 @@ namespace Solver
                     {
                         lowestEntropyFields.Add(item);
                     }
-                    if (item.Superpositions.Count < lowestEntropy && item.Superpositions.Count > 0)
+                    if (item.Superpositions.Count < lowestEntropy && item.Superpositions.Count > 1)
                     {
                         lowestEntropyFields.Clear();
                         lowestEntropyFields.Add(item);
@@ -73,8 +77,12 @@ namespace Solver
                     randomField.Value = randomField.Superpositions[random.Next(0, randomField.Superpositions.Count)];
                     unsolved.Remove(randomField);
                 }
+                if (lowestEntropyFields.Count == 0)
+                {
+                    break;
+                }
 
-                if (unsolved.Count <= 0)
+                if (unsolved.Count == 0)
                 {
                     Console.WriteLine("Finished after " + loopCount + " runs");
                     break;
@@ -82,14 +90,16 @@ namespace Solver
 
 
                 lowestEntropyFields.Clear();
-                loopCount++;
-                if (loopCount > x_dims * y_dims * 2)
-                {
-                    break;
-                }
+
+                Console.WriteLine(solvedFields.Count + " Fields Solved");
 
             }
             PrintGrid(board);
+
+            Field[][] outputBoard = ConvertToJagged(board);
+
+            string json = JsonSerializer.Serialize(outputBoard);
+            Console.WriteLine(json);
         }
 
         static Field[,] IntializeBoard(int x_dims, int y_dims, int?[,] set_positions = null)
@@ -196,14 +206,31 @@ namespace Solver
             return number - remainder;
         }
 
-        class Field
+        static Field[][] ConvertToJagged(Field[,] board)
         {
-            public int x { get; set; }
-            public int y { get; set; }
-            public int? Value { get; set; }
-            public List<int> Superpositions { get; set; }
+            int rows = board.GetLength(0);
+            int cols = board.GetLength(1);
+
+            Field[][] output = new Field[rows][];
+
+            for (int x = 0; x < rows; x++)
+            {
+                output[x] = new Field[cols];
+                for (int y = 0; y < cols; y++)
+                {
+                    output[x][y] = board[x, y];
+                }
+            }
+
+            return output;
         }
 
-
+    }
+    class Field
+    {
+        public int x { get; set; }
+        public int y { get; set; }
+        public int? Value { get; set; }
+        public List<int> Superpositions { get; set; }
     }
 }
