@@ -35,6 +35,8 @@ namespace Solver
 
             PrintGrid(board);
 
+            Console.WriteLine("---------------------");
+
             List<Field> lowestEntropyFields = new List<Field>();
             List<Field> solvedFields = new List<Field>();
             int lowestEntropy = 250;
@@ -95,11 +97,7 @@ namespace Solver
 
             }
             PrintGrid(board);
-
-            Field[][] outputBoard = ConvertToJagged(board);
-
-            string json = JsonSerializer.Serialize(outputBoard);
-            Console.WriteLine(json);
+            Console.ReadLine();
         }
 
         static Field[,] IntializeBoard(int x_dims, int y_dims, int?[,] set_positions = null)
